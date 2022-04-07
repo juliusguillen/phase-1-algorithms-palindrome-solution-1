@@ -1,14 +1,19 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function reverse(word){
+  const wordArray = word.split("");
+  const reversedWordArray = wordArray.reverse();
+  const  reversedWord = reversedWordArray.join("");
+  return reversedWord;
 }
 
-/* 
-  Add your pseudocode here
-*/
+function isPalindrome(word) {
+const reverseWord = reverse(word)
+if (word === reverseWord) {
+  return true 
+} else {
+  return false
+}
+}
 
-/*
-  Add written explanation of your solution here
-*/
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
